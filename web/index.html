@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+<meta http-equiv="content-type" content="text/html;charset=utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" type="text/css" href="external/bootstrap/css/bootstrap.min.css">
+<link rel="stylesheet" type="text/css" href="external/bootstrap/css/bootstrap-theme.min.css">
+<link rel="stylesheet" type="text/css" href="css/style.css">
+<title>Marvelous!</title>
+<meta name="author" content="Felix Guo"/>
+<meta name="keywords" content="marvelous, Lorem Ipsum, industry, dummy text"/>
+<meta name="description" content="Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since."/>
+</head>
+<body ng-app="marvelous">
+<div class="container" ng-controller="marvelousCtrl">
+	<div class="intro row">
+		<h1>Marvelous!</h1>
+		<div class="col-md-10">
+			<h5>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since.</h5>
+		</div>
+	</div>
+	<div class="title">ADD AN ITEM</div>
+	<div class="content row">
+		<div class="col-md-5">
+			<input class="f-name" type="text" ng-model="name" placeholder="ENTRY ITEM">
+			<div class="f-column">
+				<div class="current-column" ng-click="toggleColumn()" ng-class="{'open':columnOpen}">{{column.name||'CHOOSE COLUMN'}}</div>
+				<div class="option-column" ng-repeat="col in columns" ng-click="setColumn(col)" ng-show="columnOpen">{{col.name}}</div>
+			</div>
+			<button class="f-add" ng-click="addItem()">ADD ITEM</button>
+			<div class="f-label">SEARCH AN ITEM</div>
+			<div class="search-panel">
+				<input class="f-search" type="text" placeholder="SEARCH" ng-model="search">
+				<span class="glyphicon glyphicon-search"></span>
+			</div>
+		</div>
+		<div class="col-md-11">
+			<div class="items clearfix">
+				<div class="column">
+					<div class="column-title">COLUMN 1</div>
+					<div class="item" ng-repeat="item in columns[0].items | filter:{name:search}">
+						<span>{{item.name}}</span>
+						<span class="del" ng-click="delItem(item)"></span>
+					</div>
+				</div>
+				<div class="column">
+					<div class="column-title">COLUMN 2</div>
+					<div class="item" ng-repeat="item in columns[1].items | filter:{name:search}">
+						<span>{{item.name}}</span>
+						<span class="del" ng-click="delItem(item)"></span>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<script src="external/angular/angular.min.js"></script>
+<script src="js/marvelous.js"></script>
+</body>
+</html>

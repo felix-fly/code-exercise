@@ -1,0 +1,202 @@
+@import url(https://fonts.googleapis.com/css?family=Merriweather:300italic);
+body {
+	background-color: #79818f;
+	font-family: "HelveticaNeue-Light", "Helvetica Neue Light",
+		"Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+.intro {
+	margin-top: 100px;
+	margin-bottom: 70px;
+}
+
+.intro h1 {
+	color: #fff;
+	font-size: 72pt;
+	font-style: italic;
+	font-family: 'Merriweather', serif;
+}
+
+.intro h5 {
+	font-size: 23pt;
+	color: #8fffee;
+	font-weight: lighter;
+}
+
+.title {
+	background: url(images/title-bg.png) repeat-x left center;
+	height: 55px;
+	line-height: 55px;
+	text-align: center;
+	color: #fff;
+	font-size: 24pt;
+}
+
+.content {
+	margin-top: 20px;
+	margin-bottom: 150px;
+}
+
+.content .f-name {
+	background-color: #9ba1ab;
+	border: 4px solid #fff;
+	display: block;
+	width: 100%;
+	color: #d1d4d8;
+	font-size: 16pt;
+	padding: 0 15px;
+	height: 73px;
+	line-height: 73px;
+	margin-bottom: 20px;
+}
+
+input::-webkit-input-placeholder {
+	color: #d1d4d8;
+}
+
+input:-moz-placeholder {
+	color: #d1d4d8;
+}
+
+input::-moz-placeholder {
+	color: #d1d4d8;
+}
+
+input:-ms-input-placeholder {
+	color: #d1d4d8;
+}
+
+.content .f-column {
+	display: block;
+	width: 100%;
+	font-size: 16pt;
+	min-height: 217px;
+	margin-bottom: 20px;
+}
+
+.content .f-column .current-column {
+	color: #d1d4d8;
+	background-color: #9ba1ab;
+	border: 4px solid #fff;
+	padding: 0 15px;
+	height: 73px;
+	line-height: 73px;
+	cursor: pointer;
+}
+
+.content .f-column .current-column.open {
+	background-color: #b4b9c0;
+	color: #e4e6e9;
+}
+
+.content .f-column .option-column {
+	padding: 0 15px;
+	height: 71px;
+	line-height: 71px;
+	background-color: #fff;
+	color: #79818f;
+	cursor: pointer;
+	margin-bottom: 2px;
+}
+
+.content .f-column .option-column:hover {
+	color: #505660;
+}
+
+.content .f-add {
+	display: block;
+	width: 100%;
+	color: #d1d4d8;
+	background-color: #9ba1ab;
+	border: 4px solid #fff;
+	padding: 17px 0;
+	cursor: pointer;
+	margin-bottom: 46px;
+	font-size: 16pt;
+	text-align: center;
+}
+
+.content .f-add:hover {
+	background: url(images/btn-hover.png) repeat-x center;
+	color: #fff;
+}
+
+.content .f-label {
+	color: #fff;
+	font-size: 16pt;
+	font-weight: bold;
+}
+
+.content .search-panel {
+	position: relative;
+	font-size: 16pt;
+}
+
+.content .f-search {
+	background-color: #9ba1ab;
+	border: 4px solid #fff;
+	color: #cdd0d5;
+	padding: 10px 50px 10px 15px;
+	display: block;
+	width: 100%;
+}
+
+.content .search-panel .glyphicon-search {
+	position: absolute;
+	right: 18px;
+	top: 18px;
+	color: #fff;
+}
+
+.content .items {
+	display: table;
+	width: 100%;
+	border-collapse: collapse;
+}
+
+.content .column {
+	border: 8px solid #fff;
+	width: 50%;
+	display: table-cell;
+}
+
+.content .column-title {
+	background: url(images/column-bg.png) repeat-x left center;
+	height: 65px;
+	line-height: 65px;
+	text-align: center;
+	color: #fff;
+	font-size: 20pt;
+}
+
+.content .item {
+	background-color: #f2f3f4;
+	height: 65px;
+	line-height: 65px;
+	color: #79818f;
+	padding-left: 25px;
+	padding-right: 50px;
+	font-size: 23.27pt;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	position: relative;
+}
+
+.content .item .del {
+	background: url(images/icon-del.png) no-repeat center;
+	height: 32px;
+	width: 32px;
+	position: absolute;
+	top: 16px;
+	right: 16px;
+	cursor: pointer;
+}
+
+.content .item:nth-of-type(odd) {
+	background-color: #bcc0c7;
+	color: #fff;
+}
+
+.content .item:nth-of-type(odd) .del {
+	background: url(images/icon-del-odd.png) no-repeat center;
+}
